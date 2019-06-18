@@ -1,0 +1,102 @@
+.statistic {
+  padding: 100px 0;
+
+  &__head-text {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+  }
+  &__title {
+    @include title();
+  }
+  &__subtitle {
+    @include subtitle();
+    margin-top: 17px;
+  }
+
+  &__icons-block {
+    width: 56%;
+    margin: 55px auto 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__icons-element {
+    text-align: center;
+  }
+  &__icons-img {
+    height: 50px;
+  }
+  &__num {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: $title-color;
+  }
+  &__num-text {
+    margin-top: 5px;
+    font-size: 14px;
+    color: $text-color;
+  }
+
+  &__quote {
+    margin: 80px auto 0;
+    width: 50%;
+    text-align: center;
+    &-name {
+      margin-top: 18px;
+      color: $title-color;
+      font-size: 22px;
+      line-height: 24px;
+    }
+    &-description {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 20px;
+      color: $text-color;
+    }
+    &-text {
+      position: relative;
+      margin-top: 30px;
+      font-size: 20px;
+      line-height: 24px;
+      color: $text-color;
+      &::before, &::after {
+        position: absolute;
+        color: $text-color;
+        font-size: 70px;
+      }
+      &::before {
+        content: '\201c';
+        top: 20px;
+        left: -9%;
+      }
+      &::after {
+        content: '\201d';
+        bottom: -15px;
+        right: -9%;
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .statistic {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .statistic {
+    &__icons-block {
+      width: 90%;
+    }
+    &__icons-element {
+      flex-basis: 40%;
+      margin: 10px;
+    }
+    &__quote {
+      width: 75%;
+    }
+  }
+}

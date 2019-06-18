@@ -1,0 +1,108 @@
+.contact {
+  padding: 100px 0 75px;
+
+  &__head-text {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+  }
+  &__title {
+    @include title();
+  }
+  &__subtitle {
+    margin-top: 17px;
+    @include subtitle();
+  }
+
+  &__icons-block {
+    margin: 50px auto 0;
+    width: 63%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__icons-element {
+    margin: 20px 10px;
+    flex-basis: 27%;
+    text-align: center;
+  }
+  &__icons-img {
+    height: 20px;
+  }
+  &__icons-name {
+    margin-top: 25px;
+    font-size: 24px;
+    color: $title-color;
+  }
+  &__icons-description {
+    margin-top: 5px;
+    color: $text-color;
+    font-size: 14px;
+    line-height: 16px;
+    a {
+      color: $text-color;
+      list-style: none;
+      text-decoration: none;
+    }
+  }
+  &__form {
+    margin: 25px auto 0;
+    width: 50%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin-top: 25px;
+      padding: 15px;
+      font-size: 16px;
+      border: 2px solid #000000;
+      color: $text-color;
+    }
+    textarea {
+      margin-top: 25px;
+      padding: 15px;
+      height: 200px;
+      border: 2px solid #000000;
+      font-size: 16px;
+      color: $text-color;
+    }
+    .contact__btn {
+      margin: 24px auto 0;
+      width: 170px;
+      height: 51px;
+      background: $title-color;
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0,0,0,0.8);
+      &:active {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .contact {
+    padding: 50px 0;
+  }
+}  
+
+@media (max-width: 768px) {
+  .contact {
+    &__icons-block {
+      width: 80%;
+    }
+    &__icons-element {
+      flex-basis: 45%;
+    }
+    &__form {
+      width: 80%;
+    }
+  }
+}

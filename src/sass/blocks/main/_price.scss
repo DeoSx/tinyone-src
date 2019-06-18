@@ -1,0 +1,123 @@
+.price {
+  padding: 134px 0 100px;
+
+  &__head-text {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    @include title();
+  }
+  &__subtitle {
+    @include subtitle();
+    margin-top: 17px;
+  }
+
+  &__blocks {
+    margin: 77px auto 0;
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  &__element {
+    flex-basis: 30%;
+  }
+  
+  &__name {
+    margin-top: 25px;
+    color: $title-color;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__description{
+    margin-top: 25px;
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__cost {
+    margin-top: 45px;
+    position: relative;
+    color: $title-color;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      background: $title-color;
+      bottom: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  &__period {
+    margin-top: 23px;
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__btn {
+    margin-top: 38px;
+    width: 145px;
+    height: 47px;
+    font-size: 16px;
+    color: $title-color;
+    background: transparent;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border: 2px solid #000000;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    &:active {
+      box-shadow: none;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .price {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .price {
+    &__blocks {
+      margin: 77px auto 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    &__element {
+      margin-top: 30px;
+      flex-basis: 50%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .price {
+
+    &__element {
+      flex-basis: 100%;
+    }
+  }
+}

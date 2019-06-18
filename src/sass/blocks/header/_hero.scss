@@ -1,0 +1,68 @@
+.hero {
+  text-align: center;
+
+  &__text {
+    margin: 0 auto;
+    width: 55%;
+  }
+
+  &__title {
+    color: $header-color;
+    font-size: 47px;
+    font-weight: 700;
+    line-height: 45px;
+  }
+
+  &__subtitle {
+    margin-top: 22px;
+    color: $header-color;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__btn {
+    margin-top: 41px;
+    width: 256px;
+    height: 56px;
+    color: $title-color;
+    background: transparent;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    outline: none;
+    text-transform: uppercase;
+    border: 2px solid #000000;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    &::-moz-focus-inner { border: 0; }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  &__arrow {
+    margin-top: 180px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .hero {
+    &__text {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .hero {
+    &__text {
+      width: 100%;
+    }
+    
+    &__arrow {
+      margin-top: 70px;
+    }
+  }
+}

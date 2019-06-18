@@ -1,0 +1,66 @@
+footer {
+  padding: 95px 0 280px;
+  background: $title-color;
+}
+
+.footer {
+
+  &__head-text{
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+  }
+  &__title {
+    @include title();
+    color: #ffffff;
+  }
+  &__subtitle {
+    margin-top: 17px;
+    margin-bottom: 40px;
+    @include subtitle();
+  }
+
+  &__form {
+    margin: 0 auto;
+    width: 77%;
+    text-align: center;
+    input {
+      width: 75%;
+      border: none;
+      padding: 15px 20px;
+      font-size: 16px;
+      color: $text-color;
+      background-color: #ffffff;
+    }
+    .footer__btn {
+      margin-top: 10px;
+      width: 135px;
+      height: 49px;
+      background-color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      color: $title-color;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  &__links-block {
+    margin-top: 95px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__links-element {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__link {
+    margin-top: 8px;
+    color: #ffffff;
+    list-style: none;
+    text-decoration: none;
+  }
+}

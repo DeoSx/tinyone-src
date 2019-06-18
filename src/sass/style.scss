@@ -1,0 +1,19 @@
+@import 'reset';
+@import 'mixins';
+@import 'variables';
+@import 'core';
+@import 'fonts';
+
+@import 'blocks/header/header';
+@import 'blocks/header/hero';
+@import 'blocks/header/menu';
+@import 'blocks/header/top';
+
+@import 'blocks/main/features';
+@import 'blocks/main/price';
+@import 'blocks/main/works';
+@import 'blocks/main/team';
+@import 'blocks/main/statistic';
+@import 'blocks/main/contact';
+
+@import 'blocks/footer/footer';
